@@ -66,7 +66,7 @@ HTMLActuator.prototype.addTile = function(tile) {
         classes.push("tile-super");
 
 	
-    if (tile.value > this.maxTileValue && pictures.length > this.pictureIndex) {
+    if (tile.value > this.maxTileValue && this.pictures.length > this.pictureIndex) {
         this.maxTileValue = tile.value;
         var pic = this.pictures[this.pictureIndex];
         document.querySelector('body').style.backgroundImage = 'url("' + pic  + '")';

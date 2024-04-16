@@ -17,11 +17,14 @@ body {
 }
 
 .heading {
+}
+
+.scores-container {
     display: none;
 }
 
 .container {
-    margin-top: 270px;
+    padding-top: 270px;
 }
 
 .game-container {
