@@ -16,6 +16,12 @@ body {
     background-size: cover;
 }
 
+@media screen and (min-width: 500px) {
+    body {
+        background-size: contain;
+    }
+}
+
 .heading {
 }
 
@@ -1027,7 +1033,6 @@ body {
     margin: 30px 0;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 15px;
     position: relative
 }
 
@@ -1455,7 +1460,7 @@ footer {
 
 @media screen and (min-width: 481px) {
     .tile .tile-inner {
-        line-height:107px
+        /*  line-height:107px  */
     }
 
     .title {
@@ -1599,7 +1604,7 @@ footer {
     .tile,.tile .tile-inner {
         width: 98px;
         height: 98px;
-        line-height: 107.5px
+        line-height: 98px  /* 107.5px */
     }
 
     .tile.tile-position-1-1 {
