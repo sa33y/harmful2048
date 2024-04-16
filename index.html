@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>유해한 2048</title>
-<link rel="stylesheet" href="/css/fonts/clear-sans.css" as="style">
-<link rel="preload" href="/css/fonts/ClearSans-Bold-webfont.woff" as="font" crossorigin>
-<link href="/css/main.css" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/meta/apple-touch-icon.png">
+<link rel="stylesheet" href="/harmful2048/css/fonts/clear-sans.css" as="style">
+<link rel="preload" href="/harmful2048/css/fonts/ClearSans-Bold-webfont.woff" as="font" crossorigin>
+<link href="/harmful2048/css/main.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="/harmful2048/favicon.ico">
+<link rel="apple-touch-icon" href="/harmful2048/meta/apple-touch-icon.png">
 <style>
   .score-container:after {
     content: "Score";
@@ -17,14 +17,14 @@
     content: "Best";
   }
 </style>
-<meta property="og:image" content="/meta/apple-touch-icon.png" />
+<meta property="og:image" content="/harmful2048/meta/apple-touch-icon.png" />
 <meta name="description" content="👾 유해한 2048 게임" />
 <meta property="og:description" content="🔞 플레이하지 마세요!" />
 <meta name="twitter:description" content="🔞 플레이하지 마세요!" />
 <meta name="twitter:card" content="app" />
-<meta name="twitter:site" content="2048game.com" />
+<meta name="twitter:site" content="sa33y.github.io/harmful2048" />
 <meta name="twitter:title" content="2048" />
-<meta name="twitter:url" content="https://2048game.com" />
+<meta name="twitter:url" content="https://sa33y.github.io/harmful2048" />
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -83,81 +83,16 @@
 </div>
 </div>
 <div class="container">
-
-
-<hr>
-<h2 style="margin-bottom: 10px; text-align: center;">Learn more about <strong>2048 Game</strong></h2>
-<div>
-<ul class="unstyled tips-and-tricks">
-<li><a href="/tips-and-tricks">Tips & Tricks</a></li>
-<li class="even"><a href="/videos">2048 Videos</a></li>
-<li><a href="/quotes">2048 Quotes</a></li>
-<li class="even"><a href="/variations">2048 Variations</a></li>
-</ul>
-<div class="clearfix"></div>
-</div>
-<br/>
-<p>
-<strong>2048</strong> is an easy and fun puzzle game. Even if you don't love
-numbers you will love this game. It is played on a 4x4 grid using the arrows
-or W, A, S, D keys alternatively. Every time you press a key - all tiles slide.
-Tiles with the same value that bump into one-another are merged.
-Although there might be an optimal strategy to play, there is always some level of chance.
-If you beat the game and would
-like to master it, try to finish with a smaller score. That would mean
-that you finished with less moves.
-</p>
-<p>
-This game is mobile compatible and you can play it on any device - iPhone, iPad
-or any other smartphone.
-</p>
-<p>
-Common <a href="/questions-and-answers">questions and answers</a> about 2048.<br/>
-Learn all about <em>2048</em>'s history on
-<a href="https://en.wikipedia.org/wiki/2048_(video_game)" target="_blank">wikipedia</a>.
-<br/>
-Our <a href="/blog">2048 blog</a> and <a href="/news">news references</a>
-</p>
-<div class="clearfix"></div>
-<hr>
-<footer class="text-center">
-<strong>2048</strong> ·
-<a href="https://urbanpoll.com/" target="_blank">Urban Poll</a> ·
-<a href="https://urbanpoll.com/dj" target="_blank">Music Poll</a> ·
-<a href="https://www.youtube.com/watch?v=A3ytTKZf344" rel="nofollow" target="_blank">Shark</a> ·
-
-
-<a href="https://www.instagram.com/mishkatogarashi/" rel="nofollow" target="_blank">Cat</a>
-<br/>
-
-<div style="margin-top: 0.5rem;">
-<a href="/privacy/" style="font-size: 0.5rem;">Privacy Policy</a>
-</div>
-</footer>
-</div>
-<div class="side-column side-column-left">
-<a href="https://www.goodoldtetris.com" class="choose-language" target="_blank">👾 Free Tetris Online</a><br>
-
-<a href="https://urbanpoll.com/poll-maker" class="choose-language" target="_blank">🗳️ Poll Maker</a><br>
-<a href="https://urbanpoll.com/dj" class="choose-language" target="_blank">🎵 Urban DJ</a><br>
-
-</div>
-<div class="side-column side-column-right">
-<a href="/language.html" class="choose-language">
-<span class="flag-icon flag-icon-en"></span> Language
-</a>
-<div id="side-ad" class="side-ad">
-
-<div data-fuse="23007876580"></div>
-</div>
 </div>
 
-<script src="/js/keyboard_input_manager.js" type="text/javascript"></script>
-<script src="/js/html_actuator_local.js" type="text/javascript"></script>
-<script src="/js/grid.js" type="text/javascript"></script>
-<script src="/js/tile.js" type="text/javascript"></script>
-<script src="/js/local_storage_manager.js" type="text/javascript"></script>
-<script src="/js/game_manager.js" type="text/javascript"></script>
-<script src="/js/application.js" type="text/javascript"></script>
+<script src="/harmful2048/js/keyboard_input_manager.js" type="text/javascript"></script>
+<script src="/harmful2048/js/html_actuator_local.js" type="text/javascript"></script>
+<script src="/harmful2048/js/grid.js" type="text/javascript"></script>
+<script src="/harmful2048/js/tile.js" type="text/javascript"></script>
+<script src="/harmful2048/js/local_storage_manager.js" type="text/javascript"></script>
+<script src="/harmful2048/js/game_manager.js" type="text/javascript"></script>
+<script type="text/javascript">
+window.requestAnimationFrame(function(){new GameManager(4,KeyboardInputManager,HTMLActuator,LocalStorageManager);});
+</script>
 </body>
 </html>
