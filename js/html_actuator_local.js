@@ -5,6 +5,12 @@ function HTMLActuator() {
     this.messageContainer = document.querySelector(".game-message");
     this.sharingContainer = document.querySelector(".score-sharing");
     this.score = 0;
+    this.maxTileValue = 63;
+    this.pictureIndex = 0;
+    this.originalPicture = "https://i.pinimg.com/236x/08/06/88/080688ab04f8715650cb5b8e52bd5d14.jpg";
+    this.pictures = [
+      "https://i.pinimg.com/236x/4b/05/0c/4b050ca4fcf588eedc58aa6135f5eecf.jpg"
+    ];
 }
 HTMLActuator.prototype.actuate = function(grid, metadata) {
     var self = this;
@@ -33,12 +39,19 @@ HTMLActuator.prototype.continueGame = function() {
     this.clearMessage();
 }
 ;
+HTMLActuator.prototype.reset = function() {
+    this.maxTileValue = 63;
+    this.pictureIndex = 0;
+    document.querySelector('body').style.backgroundImage = 'url("' + this.originalPicture  + '")';
+}
+;
 HTMLActuator.prototype.clearContainer = function(container) {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
 }
 ;
+
 HTMLActuator.prototype.addTile = function(tile) {
     var self = this;
     var wrapper = document.createElement("div");
@@ -51,6 +64,15 @@ HTMLActuator.prototype.addTile = function(tile) {
     var classes = ["tile", "tile-" + tile.value, positionClass];
     if (tile.value > 2048)
         classes.push("tile-super");
+
+	
+    if (tile.value > this.maxTileValue && pictures.length > this.pictureIndex) {
+        this.maxTileValue = tile.value;
+        var pic = this.pictures[this.pictureIndex];
+        document.querySelector('body').style.backgroundImage = 'url("' + pic  + '")';
+        this.pictureIndex++;
+    }
+
     this.applyClasses(wrapper, classes);
     inner.classList.add("tile-inner");
     inner.textContent = tile.value;
@@ -111,12 +133,12 @@ HTMLActuator.prototype.updateBestScore = function(bestScore) {
 ;
 HTMLActuator.prototype.message = function(won) {
     var type = won ? "game-won" : "game-over";
-    var message = won ? "You win!" : "Game over!";
+    var message = won ? "예이이! 완전히 벗겼습니다!" : "아앗... 완전히 벗기기 실패!";
     this.messageContainer.classList.add(type);
     this.messageContainer.getElementsByTagName("p")[0].textContent = message;
-    this.clearContainer(this.sharingContainer);
-    this.sharingContainer.appendChild(this.scoreTweetButton());
-    twttr.widgets.load();
+    //this.clearContainer(this.sharingContainer);
+    //this.sharingContainer.appendChild(this.scoreTweetButton());
+    //twttr.widgets.load();
 }
 ;
 HTMLActuator.prototype.clearMessage = function() {

@@ -1,4 +1,5 @@
 html,body {
+    height: 100%;
     margin: 0;
     padding: 0;
     background: #faf8ef;
@@ -8,8 +9,26 @@ html,body {
 }
 
 body {
-    margin: 80px 0
+    margin: 80px 0;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.heading {
+    display: none;
+}
+
+.container {
+    margin-top: 270px;
+}
+
+.game-container {
+    background: transparent !important;
+}
+
+
 
 .heading:after {
     content: "";
@@ -302,7 +321,7 @@ hr {
 .tile,.tile .tile-inner {
     width: 107px;
     height: 107px;
-    line-height: 116.25px
+    line-height: 107px
 }
 
 .tile.tile-position-1-1 {
@@ -413,7 +432,8 @@ hr {
 
 .tile .tile-inner {
     border-radius: 3px;
-    background: #eee4da;
+    background: rgba(238, 228, 218, 0.7);
+    box-sizing: border-box;
     text-align: center;
     font-weight: 700;
     z-index: 10;
@@ -421,38 +441,38 @@ hr {
 }
 
 .tile.tile-2 .tile-inner {
-    background: #eee4da;
+    background: rgba(238, 228, 218, 0.7);
     box-shadow: 0 0 30px 10px transparent,inset 0 0 0 1px transparent
 }
 
 .tile.tile-4 .tile-inner {
-    background: #ede0c8;
+    background: rgba(237, 224, 200, 0.7);
     box-shadow: 0 0 30px 10px transparent,inset 0 0 0 1px transparent
 }
 
 .tile.tile-8 .tile-inner {
     color: #f9f6f2;
-    background: #f2b179
+    background: rgba(242, 177, 121, 0.7)
 }
 
 .tile.tile-16 .tile-inner {
     color: #f9f6f2;
-    background: #f59563
+    background: rgba(245, 149, 99, 0.7)
 }
 
 .tile.tile-32 .tile-inner {
     color: #f9f6f2;
-    background: #f67c5f
+    background: rgba(246, 124, 95, 0.7)
 }
 
 .tile.tile-64 .tile-inner {
     color: #f9f6f2;
-    background: #f65e3b
+    background: rgba(246, 94, 59, 0.7)
 }
 
 .tile.tile-128 .tile-inner {
     color: #f9f6f2;
-    background: #edcf72;
+    background: rgba(237, 207, 114, 0.85);
     box-shadow: 0 0 30px 10px rgba(243,215,116,.2381),inset 0 0 0 1px rgba(255,255,255,.14286);
     font-size: 45px
 }
@@ -465,7 +485,7 @@ hr {
 
 .tile.tile-256 .tile-inner {
     color: #f9f6f2;
-    background: #edcc61;
+    background: rgba(237, 204, 97, 0.9);
     box-shadow: 0 0 30px 10px rgba(243,215,116,.31746),inset 0 0 0 1px rgba(255,255,255,.19048);
     font-size: 45px
 }
@@ -478,7 +498,7 @@ hr {
 
 .tile.tile-512 .tile-inner {
     color: #f9f6f2;
-    background: #edc850;
+    background: rgba(237, 200, 80, 0.92);
     box-shadow: 0 0 30px 10px rgba(243,215,116,.39683),inset 0 0 0 1px rgba(255,255,255,.2381);
     font-size: 45px
 }
@@ -491,7 +511,7 @@ hr {
 
 .tile.tile-1024 .tile-inner {
     color: #f9f6f2;
-    background: #edc53f;
+    background: rgba(237, 197, 63, 0.94);
     box-shadow: 0 0 30px 10px rgba(243,215,116,.47619),inset 0 0 0 1px rgba(255,255,255,.28571);
     font-size: 35px
 }
@@ -504,7 +524,7 @@ hr {
 
 .tile.tile-2048 .tile-inner {
     color: #f9f6f2;
-    background: #edc22e;
+    background: rgba(237, 194, 46, 0.96);
     box-shadow: 0 0 30px 10px rgba(243,215,116,.55556),inset 0 0 0 1px rgba(255,255,255,.33333);
     font-size: 35px
 }
@@ -730,7 +750,6 @@ hr {
     }
 
     .game-container {
-        margin-top: 17px;
         position: relative;
         padding: 10px;
         cursor: default;
@@ -850,7 +869,7 @@ hr {
     .tile,.tile .tile-inner {
         width: 58px;
         height: 58px;
-        line-height: 67.5px
+        line-height: 58px
     }
 
     .tile.tile-position-1-1 {
@@ -1018,6 +1037,7 @@ p {
 }
 
 .heading {
+    margin-top: 20px;
     margin-bottom: 20px
 }
 
@@ -1072,7 +1092,7 @@ p {
 }
 
 .game-container {
-    margin-top: 25px
+    margin-top: 85px
 }
 
 .grammarly-box {

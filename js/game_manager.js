@@ -8,10 +8,12 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
     this.inputManager.on("restart", this.restart.bind(this));
     this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
     this.setup();
+    this.actuator.reset();
 }
 GameManager.prototype.restart = function() {
     this.storageManager.clearGameState();
     this.actuator.continueGame();
+    this.actuator.reset();
     this.setup();
     window.location.href = window.location.href;
 }
